@@ -2,6 +2,7 @@ var Usergrid = require("usergrid");
 var restify = require('restify');
 var request = require('request');
 var fs = require('fs');
+var keys = require('./.keys'); // foursquare secret keys stored as FS_CLIENT_ID and FS_CLIENT_SECRET
 
 // --------------
 // Apigee Setup
@@ -13,9 +14,6 @@ var client = new Usergrid.client({
 
 // ---------------
 // Foursquare testing setup
-// find secure way soon
-FS_CLIENT_ID = "COVIVNQAEXRUTRZPU3N1P5MPPCBVVQCYH41T0DB1KDUYAKHR";
-FS_CLIENT_SECRET = "Q3JM230MN4FK2WDOUOPFQQOADRRUQ3XSQA4V5KREHRBQIAMT";
 // venue explore request should be of the form
 // https://api.foursquare.com/v2/venues/explore?ll=36.976141,-121.892541&client_id=FS_CLIENT_ID&client_secret=FS_CLIENT_SECRET&v=20130815
 var base_url = "https://api.foursquare.com/v2/venues/explore?";
@@ -43,7 +41,7 @@ function build_fs_request (lat, lng) {
 }
 
 var full_sample_request = base_url + "ll=" + sample_geo + "&client_id=" + FS_CLIENT_ID + "&client_secret=" + FS_CLIENT_SECRET + "&v=" + dayString;
-// console.log(full_sample_request);
+console.log(full_sample_request);
 // console.log(build_fs_request(36.976141, -121.892541));
 
 // request.get(full_sample_request, function (err, res, body) {
