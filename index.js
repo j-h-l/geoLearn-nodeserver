@@ -75,6 +75,7 @@ var rest_server = restify.createServer();
 rest_server.get('/giverec/:loc', respond_to_ios);
 rest_server.head('/giverec/:loc', respond_to_ios);
 
-rest_server.listen(8008, function () {
+var PORT = process.env.PORT || 8008;
+rest_server.listen(PORT, function () {
     console.log('%s listening at %s', rest_server.name, rest_server.url);
 });
