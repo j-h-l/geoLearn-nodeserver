@@ -1,0 +1,32 @@
+{
+  "name": "geoLearn-node",
+  "version": "0.0.1",
+  "description": "A sample showing off the Node.js module for App Services.",
+  "main": "index.js",
+  "scripts": {
+    "test": "node index.js"
+  },
+  "dependencies": {
+    "usergrid": "0.10.4",
+    "oauth": "~0.9.10",
+    "restify": "~2.6.0"
+  },
+  "engines": {
+      "node": "0.10.13",
+      "npm": "1.3.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/heroku/node-js-sample"
+  },
+  "keywords": [
+    "Apigee",
+    "App",
+    "Services",
+    "UserGrid",
+    "node",
+    "heroku"
+  ],
+  "author": "Jeehyung Lee",
+  "license": "GPL"
+}
